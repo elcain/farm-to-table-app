@@ -1,0 +1,202 @@
+[2018-07-19T23:27:32.631] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets
+[2018-07-19T23:27:35.078] [INFO] app - Find 6 predfinded apps.
+[2018-07-19T23:27:35.079] [INFO] repo - insert HTML.About
+[2018-07-19T23:27:35.080] [INFO] repo - insert HTML.AddData
+[2018-07-19T23:27:35.080] [INFO] repo - insert HTML.Analysis
+[2018-07-19T23:27:35.081] [INFO] repo - insert HTML.AttributeTable
+[2018-07-19T23:27:35.081] [INFO] repo - insert HTML.BasemapGallery
+[2018-07-19T23:27:35.082] [INFO] repo - insert HTML.BatchAttributeEditor
+[2018-07-19T23:27:35.082] [INFO] repo - insert HTML.Bookmark
+[2018-07-19T23:27:35.083] [INFO] repo - insert HTML.Chart
+[2018-07-19T23:27:35.083] [INFO] repo - insert HTML.Coordinate
+[2018-07-19T23:27:35.084] [INFO] repo - insert HTML.CoordinateConversion
+[2018-07-19T23:27:35.084] [INFO] repo - insert HTML.CostAnalysis
+[2018-07-19T23:27:35.084] [INFO] repo - insert HTML.DataAggregation
+[2018-07-19T23:27:35.085] [INFO] repo - insert HTML.Directions
+[2018-07-19T23:27:35.086] [INFO] repo - insert HTML.DistanceAndDirection
+[2018-07-19T23:27:35.086] [INFO] repo - insert HTML.DistrictLookup
+[2018-07-19T23:27:35.086] [INFO] repo - insert HTML.Draw
+[2018-07-19T23:27:35.087] [INFO] repo - insert HTML.Edit
+[2018-07-19T23:27:35.087] [INFO] repo - insert HTML.EmergencyResponseGuide
+[2018-07-19T23:27:35.088] [INFO] repo - insert HTML.ExtentNavigate
+[2018-07-19T23:27:35.089] [INFO] repo - insert HTML.Filter
+[2018-07-19T23:27:35.089] [INFO] repo - insert HTML.FullScreen
+[2018-07-19T23:27:35.090] [INFO] repo - insert HTML.GeoLookup
+[2018-07-19T23:27:35.090] [INFO] repo - insert HTML.Geoprocessing
+[2018-07-19T23:27:35.091] [INFO] repo - insert HTML.GridOverlay
+[2018-07-19T23:27:35.091] [INFO] repo - insert HTML.GriddedReferenceGraphic
+[2018-07-19T23:27:35.091] [INFO] repo - insert HTML.GroupFilter
+[2018-07-19T23:27:35.092] [INFO] repo - insert HTML.HomeButton
+[2018-07-19T23:27:35.092] [INFO] repo - insert HTML.ImageMeasurement
+[2018-07-19T23:27:35.093] [INFO] repo - insert HTML.IncidentAnalysis
+[2018-07-19T23:27:35.094] [INFO] repo - insert HTML.InfoSummary
+[2018-07-19T23:27:35.094] [INFO] repo - insert HTML.Infographic
+[2018-07-19T23:27:35.095] [INFO] repo - insert HTML.LayerList
+[2018-07-19T23:27:35.095] [INFO] repo - insert HTML.Legend
+[2018-07-19T23:27:35.096] [INFO] repo - insert HTML.Measurement
+[2018-07-19T23:27:35.096] [INFO] repo - insert HTML.MyLocation
+[2018-07-19T23:27:35.097] [INFO] repo - insert HTML.NearMe
+[2018-07-19T23:27:35.097] [INFO] repo - insert HTML.ObliqueViewer
+[2018-07-19T23:27:35.098] [INFO] repo - insert HTML.OverviewMap
+[2018-07-19T23:27:35.098] [INFO] repo - insert HTML.ParcelDrafter
+[2018-07-19T23:27:35.099] [INFO] repo - insert HTML.Print
+[2018-07-19T23:27:35.099] [INFO] repo - insert HTML.PublicNotification
+[2018-07-19T23:27:35.100] [INFO] repo - insert HTML.Query
+[2018-07-19T23:27:35.100] [INFO] repo - insert HTML.RelatedTableCharts
+[2018-07-19T23:27:35.101] [INFO] repo - insert HTML.ReportFeature
+[2018-07-19T23:27:35.101] [INFO] repo - insert HTML.ReviewerDashboard
+[2018-07-19T23:27:35.102] [INFO] repo - insert HTML.Scalebar
+[2018-07-19T23:27:35.102] [INFO] repo - insert HTML.Screening
+[2018-07-19T23:27:35.103] [INFO] repo - insert HTML.Search
+[2018-07-19T23:27:35.103] [INFO] repo - insert HTML.Select
+[2018-07-19T23:27:35.104] [INFO] repo - insert HTML.Share
+[2018-07-19T23:27:35.104] [INFO] repo - insert HTML.SituationAwareness
+[2018-07-19T23:27:35.105] [INFO] repo - insert HTML.SmartEditor
+[2018-07-19T23:27:35.105] [INFO] repo - insert HTML.Splash
+[2018-07-19T23:27:35.106] [INFO] repo - insert HTML.Stream
+[2018-07-19T23:27:35.106] [INFO] repo - insert HTML.SuitabilityModeler
+[2018-07-19T23:27:35.107] [INFO] repo - insert HTML.Summary
+[2018-07-19T23:27:35.107] [INFO] repo - insert HTML.Swipe
+[2018-07-19T23:27:35.107] [INFO] repo - insert HTML.TimeSlider
+[2018-07-19T23:27:35.108] [INFO] repo - insert HTML.ZoomSlider
+[2018-07-19T23:27:35.110] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/themes
+[2018-07-19T23:27:35.480] [INFO] repo - insert HTML.DartTheme
+[2018-07-19T23:27:35.481] [INFO] repo - insert HTML.BillboardTheme
+[2018-07-19T23:27:35.483] [INFO] repo - insert HTML.BoxTheme
+[2018-07-19T23:27:35.483] [INFO] repo - insert HTML.DashboardTheme
+[2018-07-19T23:27:35.485] [INFO] repo - insert HTML.FoldableTheme
+[2018-07-19T23:27:35.486] [INFO] repo - insert HTML.LaunchpadTheme
+[2018-07-19T23:27:35.487] [INFO] repo - insert HTML.PlateauTheme
+[2018-07-19T23:27:35.487] [INFO] repo - insert HTML.JewelryBoxTheme
+[2018-07-19T23:27:35.488] [INFO] repo - insert HTML.TabTheme
+[2018-07-19T23:27:35.488] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/widgets
+[2018-07-19T23:27:36.035] [INFO] repo - insert HTML3D.3DFx
+[2018-07-19T23:27:36.035] [INFO] repo - insert HTML3D.About
+[2018-07-19T23:27:36.035] [INFO] repo - insert HTML3D.Compass
+[2018-07-19T23:27:36.036] [INFO] repo - insert HTML3D.BasemapGallery
+[2018-07-19T23:27:36.036] [INFO] repo - insert HTML3D.Coordinate
+[2018-07-19T23:27:36.037] [INFO] repo - insert HTML3D.Daylight
+[2018-07-19T23:27:36.037] [INFO] repo - insert HTML3D.FullScreen
+[2018-07-19T23:27:36.037] [INFO] repo - insert HTML3D.Home
+[2018-07-19T23:27:36.037] [INFO] repo - insert HTML3D.LayerList
+[2018-07-19T23:27:36.038] [INFO] repo - insert HTML3D.Legend
+[2018-07-19T23:27:36.038] [INFO] repo - insert HTML3D.Measurement3D
+[2018-07-19T23:27:36.038] [INFO] repo - insert HTML3D.Navigate
+[2018-07-19T23:27:36.039] [INFO] repo - insert HTML3D.MyLocation
+[2018-07-19T23:27:36.039] [INFO] repo - insert HTML3D.Search
+[2018-07-19T23:27:36.040] [INFO] repo - insert HTML3D.Slides
+[2018-07-19T23:27:36.040] [INFO] repo - insert HTML3D.Share
+[2018-07-19T23:27:36.040] [INFO] repo - insert HTML3D.Splash
+[2018-07-19T23:27:36.041] [INFO] repo - insert HTML3D.ZoomSlider
+[2018-07-19T23:27:36.041] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/themes
+[2018-07-19T23:27:36.337] [INFO] repo - insert HTML3D.BillboardTheme
+[2018-07-19T23:27:36.338] [INFO] repo - insert HTML3D.DartTheme
+[2018-07-19T23:27:36.339] [INFO] repo - insert HTML3D.BoxTheme
+[2018-07-19T23:27:36.340] [INFO] repo - insert HTML3D.DashboardTheme
+[2018-07-19T23:27:36.340] [INFO] repo - insert HTML3D.FoldableTheme
+[2018-07-19T23:27:36.341] [INFO] repo - insert HTML3D.JewelryBoxTheme
+[2018-07-19T23:27:36.342] [INFO] repo - insert HTML3D.LaunchpadTheme
+[2018-07-19T23:27:36.343] [INFO] repo - insert HTML3D.TabTheme
+[2018-07-19T23:29:28.241] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets
+[2018-07-19T23:29:30.262] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/themes
+[2018-07-19T23:29:30.602] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/widgets
+[2018-07-19T23:29:31.123] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/themes
+[2018-07-19T23:38:38.604] [INFO] default - No portal URL is set, redirect /webappbuilder/ to /webappbuilder/?action=setportalurl
+[2018-07-20T18:13:16.634] [ERROR] default - BadRequestError: request aborted
+    at IncomingMessage.onAborted (/Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/server/node_modules/raw-body/index.js:231:10)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at abortIncoming (_http_server.js:424:9)
+    at socketOnClose (_http_server.js:418:3)
+    at emitOne (events.js:121:20)
+    at Socket.emit (events.js:211:7)
+    at TCP._handle.close [as _onclose] (net.js:557:12)
+[2018-07-20T18:13:16.640] [ERROR] default - BadRequestError: request aborted
+    at IncomingMessage.onAborted (/Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/server/node_modules/raw-body/index.js:231:10)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at abortIncoming (_http_server.js:424:9)
+    at socketOnClose (_http_server.js:418:3)
+    at emitOne (events.js:121:20)
+    at Socket.emit (events.js:211:7)
+    at TCP._handle.close [as _onclose] (net.js:557:12)
+[2018-07-20T18:13:16.641] [ERROR] default - BadRequestError: request aborted
+    at IncomingMessage.onAborted (/Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/server/node_modules/raw-body/index.js:231:10)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at abortIncoming (_http_server.js:424:9)
+    at socketOnClose (_http_server.js:418:3)
+    at emitOne (events.js:121:20)
+    at Socket.emit (events.js:211:7)
+    at TCP._handle.close [as _onclose] (net.js:557:12)
+[2018-07-20T18:13:16.641] [ERROR] default - BadRequestError: request aborted
+    at IncomingMessage.onAborted (/Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/server/node_modules/raw-body/index.js:231:10)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at abortIncoming (_http_server.js:424:9)
+    at socketOnClose (_http_server.js:418:3)
+    at emitOne (events.js:121:20)
+    at Socket.emit (events.js:211:7)
+    at TCP._handle.close [as _onclose] (net.js:557:12)
+[2018-07-20T18:25:52.221] [INFO] default - No token is found, redirect /webappbuilder to /webappbuilder?action=setportalurl
+[2018-07-20T18:26:36.875] [ERROR] default - BadRequestError: request aborted
+    at IncomingMessage.onAborted (/Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/server/node_modules/raw-body/index.js:231:10)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at abortIncoming (_http_server.js:424:9)
+    at socketOnClose (_http_server.js:418:3)
+    at emitOne (events.js:121:20)
+    at Socket.emit (events.js:211:7)
+    at TCP._handle.close [as _onclose] (net.js:557:12)
+[2018-07-20T18:26:36.876] [ERROR] default - BadRequestError: request aborted
+    at IncomingMessage.onAborted (/Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/server/node_modules/raw-body/index.js:231:10)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at abortIncoming (_http_server.js:424:9)
+    at socketOnClose (_http_server.js:418:3)
+    at emitOne (events.js:121:20)
+    at Socket.emit (events.js:211:7)
+    at TCP._handle.close [as _onclose] (net.js:557:12)
+[2018-07-20T18:28:08.521] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/jimu.js
+[2018-07-20T18:28:11.032] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/images
+[2018-07-20T18:28:11.039] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/libs
+[2018-07-20T18:28:11.264] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/index.html
+[2018-07-20T18:28:11.265] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/env.js
+[2018-07-20T18:28:11.266] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/simpleLoader.js
+[2018-07-20T18:28:11.268] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/init.js
+[2018-07-20T18:28:11.297] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/web.config
+[2018-07-20T18:28:11.299] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/dynamic-modules
+[2018-07-20T18:28:11.303] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/readme.html
+[2018-07-20T18:28:11.303] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/config-readme.txt
+[2018-07-20T18:28:11.305] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/configs
+[2018-07-20T18:28:11.335] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/.jshintrc
+[2018-07-20T18:28:11.366] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/.jshintignore
+[2018-07-20T18:28:11.385] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/3rd-party-license.txt
+[2018-07-20T18:28:11.443] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/themes/FoldableTheme
+[2018-07-20T18:28:11.821] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/Scalebar
+[2018-07-20T18:28:11.891] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/Search
+[2018-07-20T18:28:12.549] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/Coordinate
+[2018-07-20T18:28:12.831] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/OverviewMap
+[2018-07-20T18:28:13.056] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/HomeButton
+[2018-07-20T18:28:13.087] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/MyLocation
+[2018-07-20T18:28:13.154] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/AttributeTable
+[2018-07-20T18:28:13.430] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/Splash
+[2018-07-20T18:28:13.803] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/ZoomSlider
+[2018-07-20T18:28:13.875] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/ExtentNavigate
+[2018-07-20T18:28:13.935] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/FullScreen
+[2018-07-20T18:28:14.028] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/Legend
+[2018-07-20T18:28:14.104] [DEBUG] utils - copy /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets/LayerList
+[2018-07-21T09:24:26.925] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets
+[2018-07-21T09:24:28.468] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/themes
+[2018-07-21T09:24:28.800] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/widgets
+[2018-07-21T09:24:29.291] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/themes
+[2018-07-21T09:26:40.188] [INFO] default - No portal URL is set, redirect /webappbuilder/index.html to /webappbuilder/index.html?action=setportalurl
+[2018-07-21T09:27:42.250] [INFO] default - redirect  /webappbuilder/stemapp/index.html?id=2 to /webappbuilder/apps/2
+[2018-07-21T10:02:00.074] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets
+[2018-07-21T10:02:02.097] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/themes
+[2018-07-21T10:02:02.425] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/widgets
+[2018-07-21T10:02:02.927] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/themes
+[2018-07-21T10:17:45.488] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/widgets
+[2018-07-21T10:17:46.948] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/themes
+[2018-07-21T10:17:47.215] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/widgets
+[2018-07-21T10:17:47.636] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/themes

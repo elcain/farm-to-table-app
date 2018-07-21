@@ -1,0 +1,18 @@
+.esri-direct-line-measurement-3d {
+  pointer-events: auto;
+}
+
+.jimu-widget-measurement .hidden {
+  display: none !important;
+}
+
+.jimu-widget-measurement .esri-button {
+  height: 32px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.jimu-widget-measurement .measurement-button-wrapper {
+  padding: 12px 15px;
+}

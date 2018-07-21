@@ -1,0 +1,14 @@
+[
+  {
+    "portalUrl": "http://esri.maps.arcgis.com",
+    "appId": "DaN8RiaHJtMzoniU",
+    "supportsOAuth": true,
+    "isWebTier": false
+  },
+  {
+    "portalUrl": "https://intern-hackathon.maps.arcgis.com",
+    "appId": "DaN8RiaHJtMzoniU",
+    "supportsOAuth": true,
+    "isWebTier": false
+  }
+]
