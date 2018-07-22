@@ -11,7 +11,7 @@ require([
         // Code to create the map and view will go here
 
         var myMap = new Map({
-          basemap: "streets" // satellite, hybrid, topo, gray, dark-gray, oceans, osm, national-geographic
+          basemap: "streets", // satellite, hybrid, topo, gray, dark-gray, oceans, osm, national-geographic
         });
 
         // Create a MapView instance (for 2D viewing) and reference the map instance
@@ -22,8 +22,8 @@ require([
 
         // Set the center and zoom level on the view
         // view.center = [-95, 38];  // Sets the center point of the view at a specified lon/lat
-        view.center = [-93, 41];
-        view.zoom = 8;  // Sets the zoom LOD to 13
+        view.center = [-117.18, 34.08];
+        view.zoom = 13;  // Sets the zoom LOD to 13
 
         // view.when(function(){
         //   // All the resources in the MapView and the map have loaded. Now execute additional processes
@@ -33,22 +33,61 @@ require([
         //   console.log("The view's resources failed to load: ", error);
         // });
 
-        var farm2table = new FeatureLayer({
+        var template = {
+          title: "Farm Info",
+          location: event.mapPoint, // Set the location of the popup to the clicked location
+          content: "{NAME}"
+          // content: [
+          //   {
+          //     name: "{NAME}", 
+          //     city: "{CITY}", 
+          //     state: "{STATE}", 
+          //     contact: "{CONTACT_PHONE}", 
+          //     speciality: "{FEATURED}"
+          //   }
+          // ]
+        };
+
+        var farms = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_PublicView/FeatureServer/0",
-          title: "Local Food Product",
+          title: "Local Food Product", 
+          popupTemplate: template
         });
+
+        var businesses = new FeatureLayer({
+          url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_PublicView/FeatureServer/1",
+          title: "2", 
+
+        });
+
+        // var farm2table3 = new FeatureLayer({
+        //   url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_Routes_PublicView/FeatureServer/0",
+        //   title: "3", 
+        // });
+
+        var farm2table = new FeatureLayer({
+          url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_Routes_PublicView/FeatureServer/0",
+          title: "4", 
+          definitionExpression: "DestinationOID = 6 AND OriginOID = 113"
+        });
+
+        
 
         myMap.layers.add(farm2table);
+        myMap.layers.add(farms);
+        myMap.layers.add(businesses);
 
-        // Create a variable referencing the checkbox node
-        var streetsLayerToggle = dom.byId("streetsLayer");
+        // view.on("click", function(event) {
+        //   setTimeout(()=> {view.hitTest(event).then(test)}, 8000); 
+        // });
 
-        // Listen to the onchange event for the checkbox
-        on(streetsLayerToggle, "change", function(){
-          // When the checkbox is checked (true), set the layer's visibility to true
-          farm2table.visible = streetsLayerToggle.checked;
-        });
-
+        function test(response) {
+          if(response.results.length !== 0) {
+            console.log("Hey you clicked me!");
+            window.open("https://localhost:3344/webappbuilder/apps/2/");
+          }
+        }
+      
         // var highlight;
         // view.whenLayerView(treesLayer).then(function(layerView){
         // var query = treesLayer.createQuery();
