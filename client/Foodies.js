@@ -11,6 +11,20 @@ require([
     ], function(esriRequest, Map, MapView, TileLayer, FeatureLayer, dom, on) {
         // Code to create the map and view will go here
 
+		// Setup URL Parameter
+        var urlParam = function(name, w){
+    	w = w || window;
+   		var rx = new RegExp('[\&|\?]'+name+'=([^\&\#]+)'),
+        val = w.location.search.match(rx);
+    	return !val ? '':val[1];
+		}
+		
+	var whereroute = decodeURIComponent(urlParam('route'));
+	var wherefarm = decodeURIComponent(urlParam('farm'));
+	var wherebusiness = decodeURIComponent(urlParam('business'));
+	var extent = [Number(urlParam('x')), Number(urlParam('y'))];
+	var zoom = Number(urlParam('z'));
+	
         var myMap = new Map({
           basemap: "streets", // satellite, hybrid, topo, gray, dark-gray, oceans, osm, national-geographic
         });
@@ -23,8 +37,8 @@ require([
 
         // Set the center and zoom level on the view
         // view.center = [-95, 38];  // Sets the center point of the view at a specified lon/lat
-        view.center = [-117.18, 34.08];
-        view.zoom = 13;  // Sets the zoom LOD to 13
+        view.center = extent;
+        view.zoom = zoom;  // Sets the zoom LOD to 13
 
         // view.when(function(){
         //   // All the resources in the MapView and the map have loaded. Now execute additional processes
@@ -35,41 +49,44 @@ require([
         // });
 
         var template = {
-          title: "Farm Info",
-          location: event.mapPoint, // Set the location of the popup to the clicked location
-          content: "{NAME}"
-          // content: [
-          //   {
-          //     name: "{NAME}", 
-          //     city: "{CITY}", 
-          //     state: "{STATE}", 
-          //     contact: "{CONTACT_PHONE}", 
-          //     speciality: "{FEATURED}"
-          //   }
-          // ]
-        };
+         title: "Farm Info",
+         location: event.mapPoint, // Set the location of the popup to the clicked location
+         content: [{
+           // type: "esriFieldTypeString",
+           type: "fields",
+           fieldInfos: [{            
+             fieldName: "NAME",
+             visible: true
+           }, {
+             fieldName: "WEBSITE",
+             visible: true
+           }]
+         }]
+       };
 
+	   
         var farms = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_PublicView/FeatureServer/0",
           title: "Local Food Product", 
-          popupTemplate: template
+          outFields: ["*"],
+          popupTemplate: template,
+	definitionExpression: wherefarm
         });
 
         var businesses = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_PublicView/FeatureServer/1",
           title: "2", 
+          outFields: ["*"],
+		  popupTemplate: template,
+	definitionExpression: wherebusiness
 
         });
-
-        // var farm2table3 = new FeatureLayer({
-        //   url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_Routes_PublicView/FeatureServer/0",
-        //   title: "3", 
-        // });
-
+        
         var farm2table = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_Routes_PublicView/FeatureServer/0",
-          title: "4", 
-          definitionExpression: "DestinationOID = 6 AND OriginOID = 113"
+          title: "3", 
+          outFields: ["*"],
+          definitionExpression: whereroute
         });
 
         
@@ -101,8 +118,15 @@ require([
         //   })
         // });
 
-        var url = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=pjson"; 
-        esriRequest(url, {
+		var listElement = document.createElement('div');
+ 
+      // Add it to the page
+      listContainer.appendChild(listElement);
+      document.getElementById("listContainer").appendChild(listElement);
+	  
+        var Farmurl = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=" + wherefarm + "&outFields=*&returnGeometry=true&f=pjson";
+		//var Businessurl = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=" + wherebusiness + "&outFields=*&returnGeometry=true&f=pjson";		
+        esriRequest(Farmurl, {
         responseType: "json"
       }).then(function makeList(response){
         // The requested data
@@ -112,15 +136,10 @@ require([
        // Add it to the page
       //  document.getElementsByTagName('body')[0].appendChild(listContainer);
    
-       // Make the list
-       var listElement = document.createElement('div');
-   
-       // Add it to the page
-       listContainer.appendChild(listElement);
-       document.getElementById("listContainer").appendChild(listElement);
+       
         for(x in response.data.features){
-          // create an item for each one
-        var listItem = document.createElement('p');
+          var listItem = document.createElement('p');
+       listItem.setAttribute("class", "content");
 
         // Add the item text
         //listItem.innerHTML = 
@@ -149,13 +168,14 @@ require([
 
          //For More Info: {CONTACT_NAME} {CONTACT_PHONE} or Click Here (CLICK HERE WOULD BE THE WEBSITE ADDRESS LINK) 
          listItem.innerHTML = listItem.innerHTML + "For more Info:"; 
-         if(contact_name) listItem.innerHTML = listItem.innerHTML + contact_name;
-         if(contact_phone) listItem.innerHTML = listItem.innerHTML + 
+         if(contact_name) listItem.innerHTML = listItem.innerHTML + contact_name + "<br>";
+         if(contact_phone) listItem.innerHTML = listItem.innerHTML + contact_phone;
         // Add listItem to the listElement
         listElement.appendChild(listItem); 
         }
         //document.getElementById("farms").innerHTML = txt;
       });
       // makeList(); 
+
     }
 );
