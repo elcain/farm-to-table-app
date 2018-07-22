@@ -8,6 +8,17 @@ require([
     "dojo/on",
     "dojo/domReady!"
     ], function(Map, MapView, TileLayer, FeatureLayer, dom, on) {
+    
+        // Setup URL Parameter
+        var urlParam = function(name, w){
+    	w = w || window;
+   		var rx = new RegExp('[\&|\?]'+name+'=([^\&\#]+)'),
+        val = w.location.search.match(rx);
+    	return !val ? '':val[1];
+		}
+		
+		var WhereRoute = urlParam('whereroute');
+        
         // Code to create the map and view will go here
 
         var myMap = new Map({
@@ -68,7 +79,9 @@ require([
         var farm2table = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_Routes_PublicView/FeatureServer/0",
           title: "4", 
-          definitionExpression: "DestinationOID = 6 AND OriginOID = 113"
+          definitionExpression: WhereRoute
+            // http://david.runneals.com/hackathon/Foodies.html?whereroute=DestinationOID=6  works :)
+          // definitionExpression: "DestinationOID = 6 AND OriginOID = 113"
         });
 
         
