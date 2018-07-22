@@ -17,7 +17,11 @@ require([
     	return !val ? '':val[1];
 		}
 		
-		var WhereRoute = urlParam('whereroute');
+	var whereroute = decodeURIComponent(urlParam('route'));
+	var wherefarm = decodeURIComponent(urlParam('farm'));
+	var wherebusiness = decodeURIComponent(urlParam('business'));
+	
+	// 
         
         // Code to create the map and view will go here
 
@@ -62,12 +66,14 @@ require([
         var farms = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_PublicView/FeatureServer/0",
           title: "Local Food Product", 
-          popupTemplate: template
+          popupTemplate: template,
+	definitionExpression: wherefarm
         });
 
         var businesses = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_PublicView/FeatureServer/1",
           title: "2", 
+	definitionExpression: wherebusiness
 
         });
 
@@ -79,8 +85,7 @@ require([
         var farm2table = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_Routes_PublicView/FeatureServer/0",
           title: "4", 
-          definitionExpression: WhereRoute
-            // http://david.runneals.com/hackathon/Foodies.html?whereroute=DestinationOID=6  works :)
+          definitionExpression: whereroute
           // definitionExpression: "DestinationOID = 6 AND OriginOID = 113"
         });
 
