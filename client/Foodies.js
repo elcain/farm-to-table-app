@@ -20,8 +20,11 @@ require([
 	var whereroute = decodeURIComponent(urlParam('route'));
 	var wherefarm = decodeURIComponent(urlParam('farm'));
 	var wherebusiness = decodeURIComponent(urlParam('business'));
+	var extent = [Number(urlParam('x')), Number(urlParam('y'))];
+	var zoom = Number(urlParam('z'));
+
 	
-	// 
+	
         
         // Code to create the map and view will go here
 
@@ -37,8 +40,8 @@ require([
 
         // Set the center and zoom level on the view
         // view.center = [-95, 38];  // Sets the center point of the view at a specified lon/lat
-        view.center = [-117.18, 34.08];
-        view.zoom = 13;  // Sets the zoom LOD to 13
+        view.center = extent;
+        view.zoom = zoom;  // Sets the zoom LOD to 13
 
         // view.when(function(){
         //   // All the resources in the MapView and the map have loaded. Now execute additional processes
