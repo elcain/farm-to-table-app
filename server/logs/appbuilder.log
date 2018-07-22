@@ -200,3 +200,40 @@
 [2018-07-21T10:17:46.948] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp/themes
 [2018-07-21T10:17:47.215] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/widgets
 [2018-07-21T10:17:47.636] [INFO] repo - Read repository items: /Users/anus9826/Desktop/Hackathon/WebAppBuilderForArcGIS/client/stemapp3d/themes
+[2018-07-21T13:35:28.745] [INFO] repo - Read repository items: C:\Users\student\Documents\farm-to-table-app\client\stemapp\widgets
+[2018-07-21T13:35:36.320] [ERROR] app - getAppList failed!
+[2018-07-21T13:37:45.032] [ERROR] app - getAppList failed!
+[2018-07-21T13:40:07.749] [ERROR] app - getAppList failed!
+[2018-07-21T13:42:07.769] [ERROR] app - getAppList failed!
+[2018-07-21T13:44:15.744] [ERROR] app - getAppList failed!
+[2018-07-21T13:46:15.752] [ERROR] app - getAppList failed!
+[2018-07-21T13:47:59.459] [ERROR] app - getAppList failed!
+[2018-07-21T13:49:02.494] [ERROR] app - getAppList failed!
+[2018-07-21T13:50:04.040] [INFO] default - No token is found, redirect /webappbuilder to /webappbuilder?action=setportalurl
+[2018-07-21T13:51:18.856] [ERROR] app - getAppList failed!
+[2018-07-21T13:51:22.420] [INFO] default - No token is found, redirect /webappbuilder to /webappbuilder?action=setportalurl
+[2018-07-21T13:51:33.263] [INFO] default - No token is found, redirect /webappbuilder to /webappbuilder?action=setportalurl
+[2018-07-21T13:51:56.546] [ERROR] app - getAppList failed!
+[2018-07-21T13:53:56.581] [ERROR] app - getAppList failed!
+[2018-07-21T13:53:56.584] [ERROR] app - getAppList failed!
+[2018-07-21T14:34:47.450] [ERROR] app - fail to import app. { message: 'Fail to import. The theme used by the app is in a newer version. Name:[Farm2Table - Locator (WAB)]' }
+[2018-07-21T14:34:55.628] [ERROR] app - getAppList failed!
+[2018-07-21T14:35:31.528] [ERROR] app - fail to import app. { message: 'Fail to import. The theme used by the app is in a newer version. Name:[Farm2Table - Locator (WAB)]' }
+[2018-07-21T14:36:06.634] [ERROR] app - getAppList failed!
+[2018-07-21T14:36:25.124] [ERROR] app - getAppList failed!
+[2018-07-21T14:36:51.042] [ERROR] app - getAppList failed!
+[2018-07-21T14:38:51.072] [ERROR] app - getAppList failed!
+[2018-07-21T14:38:51.072] [ERROR] app - getAppList failed!
+[2018-07-21T14:40:58.955] [INFO] repo - Read repository items: C:\Users\student\Documents\farm-to-table-app\client\stemapp\widgets
+[2018-07-21T14:41:05.801] [ERROR] app - getAppList failed!
+[2018-07-21T14:41:10.098] [ERROR] app - getAppList failed!
+[2018-07-21T14:44:40.136] [ERROR] app - getAppList failed!
+[2018-07-21T14:45:06.060] [ERROR] app - getAppList failed!
+[2018-07-21T14:45:50.940] [INFO] repo - Read repository items: C:\Users\student\Documents\farm-to-table-app\client\stemapp\widgets
+[2018-07-21T14:45:57.238] [ERROR] app - getAppList failed!
+[2018-07-21T14:45:58.197] [ERROR] app - getAppList failed!
+[2018-07-21T14:47:17.636] [ERROR] app - getAppList failed!
+[2018-07-21T14:48:15.916] [ERROR] app - getAppList failed!
+[2018-07-21T14:48:19.143] [INFO] default - No token is found, redirect /webappbuilder/ to /webappbuilder/?action=setportalurl
+[2018-07-21T14:48:19.156] [ERROR] app - getAppList failed!
+[2018-07-21T14:48:27.163] [ERROR] app - getAppList failed!
