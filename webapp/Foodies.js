@@ -137,8 +137,11 @@ require([
       listContainer.appendChild(listElement);
       document.getElementById("listContainer").appendChild(listElement);
 	  	
-	  	if(type="farm") listURL = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=" + wherefarm + "&outFields=*&returnGeometry=true&f=pjson";
-		else if(type="business") listURL = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=" + wherebusiness + "&outFields=*&returnGeometry=true&f=pjson";		
+	  	// THE FOLLOWING IS A URL FOR PULLING ROUTE INFO. Ideally it would be dynamically (iterative loop through the farm or business results) created using the routing API so I don't have to worry about the 1:many or many:1 matches.
+	  	// routeInfoURL = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_Routes_PublicView/FeatureServer/0/query?where=" + whereroute + "&outFields=*&returnGeometry=true&f=pjson";
+	  	
+	  	if(type="farm" || type="item") listURL = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=" + wherefarm + "&outFields=*&returnGeometry=true&f=pjson";
+		else if(type="business") listURL = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=" + wherebusiness + "&outFields=*&returnGeometry=true&f=pjson";
         
         esriRequest(listURL, {
         responseType: "json"
