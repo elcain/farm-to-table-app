@@ -22,8 +22,12 @@ require([
 	var whereroute = decodeURIComponent(urlParam('route'));
 	var wherefarm = decodeURIComponent(urlParam('farm'));
 	var wherebusiness = decodeURIComponent(urlParam('business'));
-	var extent = [Number(urlParam('x')), Number(urlParam('y'))];
-	var zoom = Number(urlParam('z'));
+	//var extent = [Number(urlParam('x')), Number(urlParam('y'))];
+	//var zoom = Number(urlParam('z'));
+	var type = urlParam('type');
+	var harvested = decodeURIComponent(urlParam('harvested'));
+	var planted = decodeURIComponent(urlParam('planted'));
+	var product = decodeURIComponent(urlParam('product'));
 	
         var myMap = new Map({
           basemap: "streets", // satellite, hybrid, topo, gray, dark-gray, oceans, osm, national-geographic
@@ -37,8 +41,12 @@ require([
 
         // Set the center and zoom level on the view
         // view.center = [-95, 38];  // Sets the center point of the view at a specified lon/lat
-        view.center = extent;
-        view.zoom = zoom;  // Sets the zoom LOD to 13
+        //if (extent instanceof Array) {}
+		//else {extent = [-117.15, 34.05]}
+		//if (!zoom) zoom = 13;
+		
+        view.center = [-117.15, 34.05];
+        view.zoom = 13;  // Sets the zoom LOD to 13
 
         // view.when(function(){
         //   // All the resources in the MapView and the map have loaded. Now execute additional processes
@@ -80,7 +88,7 @@ require([
 
         var businesses = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_PublicView/FeatureServer/1",
-          title: "2", 
+          title: "Local Businesses/Restaurants", 
           outFields: ["*"],
 		  popupTemplate: template,
 	definitionExpression: wherebusiness
@@ -89,7 +97,7 @@ require([
         
         var farm2table = new FeatureLayer({
           url: "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Farm2Table_Routes_PublicView/FeatureServer/0",
-          title: "3", 
+          title: "Routes", 
           outFields: ["*"],
           definitionExpression: whereroute
         });
@@ -128,10 +136,11 @@ require([
       // Add it to the page
       listContainer.appendChild(listElement);
       document.getElementById("listContainer").appendChild(listElement);
-	  
-        //var Farmurl = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/1/query?where=" + wherefarm + "&outFields=*&returnGeometry=true&f=pjson";
-		var Businessurl = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/1/query?where=" + wherebusiness + "&outFields=*&returnGeometry=true&f=pjson";		
-        esriRequest(Businessurl, {
+	  	
+	  	if(type="farm") listURL = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=" + wherefarm + "&outFields=*&returnGeometry=true&f=pjson";
+		else if(type="business") listURL = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/ArcGIS/rest/services/Farm2Table_PublicView/FeatureServer/0/query?where=" + wherebusiness + "&outFields=*&returnGeometry=true&f=pjson";		
+        
+        esriRequest(listURL, {
         responseType: "json"
       }).then(function makeList(response){
         // The requested data
@@ -158,22 +167,33 @@ require([
          var state = response.data.features[x].attributes.STATE; 
          var contact_name = response.data.features[x].attributes.CONTACT_NAME; 
          var contact_phone = response.data.features[x].attributes.CONTACT_PHONE; 
-
-         if(name) listItem.innerHTML = "Title: " + name; 
-         if(featured) listItem.innerHTML = listItem.innerHTML + featured + "<br>"; 
+         var productImg1 = response.data.features[x].attributes.PRODUCT1_IMGURL;
+         var productImg2 = response.data.features[x].attributes.PRODUCT2_IMGURL;
+    	 var productImg3 = response.data.features[x].attributes.PRODUCT3_IMGURL;
+		 
+		 
+		 if(type="item" && product != "" && planted != "" && harvested != "") listItem.innerHTML = "Your <b>" + product + "</b> was planted: " + planted + " and harvested: " + harvested + " from " + name + ".<br>";
+		 else if(type != "item") listItem.innerHTML = "";
+		 if(productImg1) listItem.innerHTML = listItem.innerHTML + '<img style="width: 100%; max-height: 200px;" src="' + productImg1 + '" /> <br>';
+         else if(!productImg1) listItem.innerHTML = listItem.innerHTML;
+         if(name) listItem.innerHTML = listItem.innerHTML + "<b>" + name + "</b> <br>"; 
+         else if(!name) listItem.innerHTML = listItem.innerHTML;
+         if(featured) listItem.innerHTML = listItem.innerHTML + "<i>" + featured + "</i> <br>"; 
+         else if(!featured) listItem.innerHTML = listItem.innerHTML;
          if(d1) listItem.innerHTML = listItem.innerHTML + d1 + "<br>"; 
-         if(d2) listItem.innerHTML = listItem.innerHTML + d2 + "<br>"; 
+         else if(!d1) listItem.innerHTML = listItem.innerHTML;
+         if(d2) listItem.innerHTML = listItem.innerHTML + d2 + "<br>";
+         else if(!d2) listItem.innerHTML = listItem.innerHTML;
          if(d3) listItem.innerHTML = listItem.innerHTML + d3 + "<br>"; 
-         else if(!d3) listItem.innerHTML = listItem.innerHTML + "<br>"; 
+         else if(!d3) listItem.innerHTML = listItem.innerHTML;  
          
-         if(address) listItem.innerHTML = listItem.innerHTML + "Come visit us: " + address; 
+         if(address) listItem.innerHTML = listItem.innerHTML + "Contact Us: " + address; 
          if(city) listItem.innerHTML = listItem.innerHTML +  ", " + city;  
          if(state) listItem.innerHTML = listItem.innerHTML + ", " + state + "<br>";
          else if(!state) listItem.innerHTML = listItem.innerHTML + "<br>"; 
-
-         //For More Info: {CONTACT_NAME} {CONTACT_PHONE} or Click Here (CLICK HERE WOULD BE THE WEBSITE ADDRESS LINK) 
-         listItem.innerHTML = listItem.innerHTML + "For more Info:"; 
-         if(contact_name) listItem.innerHTML = listItem.innerHTML + contact_name + "<br>";
+         
+         //listItem.innerHTML = listItem.innerHTML + "For more Info:"; 
+         if(contact_name) listItem.innerHTML = listItem.innerHTML + contact_name + " | ";
          if(contact_phone) listItem.innerHTML = listItem.innerHTML + contact_phone;
         // Add listItem to the listElement
         listElement.appendChild(listItem); 
